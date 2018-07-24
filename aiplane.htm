@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>schedule</title>
+    <link rel="stylesheet" type="text/css" href="airplane.css">
+    <link rel="manifest" href="flightschedule.json">
+    
+</head>
+<body>
+<header class="header">
+    <h1 class="header__title">Arrivals</h1>
+    <button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
+    <button id="butAdd" class="headerButton" aria-label="Add"></button>
+</header>
+        <main class="main">
+        <div class="card cardTemplate flight-schedule" hidden>
+            <div class="card-last-updated" hidden></div>
+            <div class="flight" hidden>
+            
+            <div class="time" hidden></div>
+        </div>
+        <div class="status">
+            
+        </div>
+
+    </div>
+    </div>
+    
+    <div class="dialog-container">
+    <div class="dialog">
+    <div class="dialog-title">Add new flight</div>
+    <div class="dialog-body">
+    <select id="selectFlightToAdd">
+    <option value="2357536">Malta to London</option>
+    <option value="2367105">Malta to Poznan</option>
+    <option value="2379574">Malta to London</option>
+    </select>
+    </div>
+    <div class="dialog-buttons">
+    <button id="butAddFlight" class="button">Add</button>
+    <button id="butAddCancel" class="button">Cancel</button>
+    </div>
+    </div>
+    </div>
+    <div class="loader">
+    <svg viewBox="0 0 32 32" width="32" height="32">
+    <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+    </svg>
+    </div>
+    </main>
+    <script src="airplane.js" async></script>
+    
+</body>
+</html>
